@@ -15,5 +15,9 @@
     "autoremote"
   ],
   "author": "Mark Lavercombe",
-  "license": "BSD"
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/mlava/ninja-autoremote/issues"
+  },
+  "homepage": "https://github.com/mlava/ninja-autoremote"
 }
