@@ -25,7 +25,7 @@ function driver(opts,app) {
       self.save();
     }
 
-    self.emit('register', new Device());
+    self.emit('register', Device);
   });
 };
 
