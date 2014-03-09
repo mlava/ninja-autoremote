@@ -9,8 +9,8 @@ util.inherits(myDriver,stream);
 // Our greeting to the user.
 var HELLO_WORLD_ANNOUNCEMENT = {
   "contents": [
-    { "type": "heading",      "text": "Hello World Driver Loaded" },
-    { "type": "paragraph",    "text": "The hello world driver has been loaded. You should not see this message again." }
+    { "type": "heading",      "text": "Autoremote Driver Loaded" },
+    { "type": "paragraph",    "text": "The Autoremote driver has been loaded. Further configuration is required. ('Drivers', 'Configure')" }
   ]
 };
 
@@ -75,6 +75,7 @@ myDriver.prototype.config = function(rpc,cb) {
     return cb(true);
   }
 };
+
 
 
 // Export it
