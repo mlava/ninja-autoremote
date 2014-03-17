@@ -16,7 +16,7 @@ var HELLO_WORLD_ANNOUNCEMENT = {
 function driver(opts,app) {
 
   var self = this;
- this._app = app;
+  this._app = app;
   this._opts = opts;
 
 
@@ -27,6 +27,8 @@ function driver(opts,app) {
       opts.hasSentAnnouncement = true;
       self.save();
     }
+	
+	if (!opts.urls) {opts.urls = [];};
 
     self.emit('register', new Device());
   });
@@ -51,7 +53,25 @@ driver.prototype.config = function(rpc,cb) {
   }
 };
 
+//driver.prototype.add = function(devOptions) {
+	//Don't add if already exists
+	//if(this._devices[devOptions.snapshot_url]) {
+		//return;
+	//}
 
+	//this._app.log.info('Adding Autoremote device:' + devOptions.name + ' (' + devOptions.snapshot_url + ')');
+	//var self = this;
+	//var Device = new Device(devOptions,self._app);
+	//self._devices[devOptions.snapshot_url] = Device;
 
-// Export it
+	//Wait a few seconds, to be sure it is connected to the cloud.
+	//setTimeout(function() {
+		//Object.keys(Device.devices).forEach(function(snapshot_url) {
+			//self._app.log.info('Adding sub-device', snapshot_url);
+			//self.emit('register', Device.devices[snapshot_url]);
+		//});
+	//},4000);
+
+//}
+
 module.exports = driver;
