@@ -30,7 +30,12 @@ function driver(opts,app) {
 	
 	if (!opts.urls) {opts.urls = [];};
 
-    self.emit('register', new Device());
+	self._opts.urls.forEach(function(url,index) {
+      // Register a device
+      self.createCameraByUrl(url,index);
+    });
+	
+    //self.emit('register', new Device());
   });
 };
 
@@ -53,25 +58,15 @@ driver.prototype.config = function(rpc,cb) {
   }
 };
 
-//driver.prototype.add = function(devOptions) {
-	//Don't add if already exists
-	//if(this._devices[devOptions.snapshot_url]) {
-		//return;
-	//}
+driver.prototype.createCameraByUrl = function(snapshot_url,index) {
 
-	//this._app.log.info('Adding Autoremote device:' + devOptions.name + ' (' + devOptions.snapshot_url + ')');
-	//var self = this;
-	//var Device = new Device(devOptions,self._app);
-	//self._devices[devOptions.snapshot_url] = Device;
+  var opts = snapshot_url;
 
-	//Wait a few seconds, to be sure it is connected to the cloud.
-	//setTimeout(function() {
-		//Object.keys(Device.devices).forEach(function(snapshot_url) {
-			//self._app.log.info('Adding sub-device', snapshot_url);
-			//self.emit('register', Device.devices[snapshot_url]);
-		//});
-	//},4000);
+  opts.port = opts.port || 80;
+  opts.method='GET'
 
-//}
+  var Camera = new Device(opts,this._app.opts,this._app.id,this._app.token,index);
+  this.emit('register', Camera);
+};
 
 module.exports = driver;
