@@ -12,7 +12,6 @@ var HELLO_WORLD_ANNOUNCEMENT = {
   ]
 };
 
-
 function driver(opts,app) {
 
   var self = this;
@@ -29,16 +28,13 @@ function driver(opts,app) {
     }
 	
 	if (!opts.urls) {opts.urls = [];};
-
-	self._opts.urls.forEach(function(url,index) {
-      // Register a device
-      self.createCameraByUrl(url,index);
-    });
+	if (!AR_keys) {var AR_keys = [];};
 	
-    //self.emit('register', new Device());
+	self._opts.urls.forEach(function(url,index) {
+		self.createCameraByUrl(url,index);
+    });
   });
 };
-
 
 driver.prototype.config = function(rpc,cb) {
 
@@ -53,7 +49,6 @@ driver.prototype.config = function(rpc,cb) {
     case 'manual_get_url':     return configHandlers.manual_get_url.call(this,rpc.params,cb); break;
     case 'manual_show_remove': return configHandlers.manual_show_remove.call(this,rpc.params,cb); break;
     case 'manual_remove_url': return configHandlers.manual_remove_url.call(this,rpc.params,cb); break;
-
     default:                   return cb(true);                                              break;
   }
 };
@@ -61,9 +56,6 @@ driver.prototype.config = function(rpc,cb) {
 driver.prototype.createCameraByUrl = function(snapshot_url,index) {
 
   var opts = snapshot_url;
-
-  opts.port = opts.port || 80;
-  opts.method='GET'
 
   var Camera = new Device(opts,this._app.opts,this._app.id,this._app.token,index);
   this.emit('register', Camera);
