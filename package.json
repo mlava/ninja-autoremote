@@ -1,7 +1,7 @@
 {
   "name": "ninja-autoremote",
-  "version": "0.0.1",
-  "description": "Autoremote module for Ninjablock",
+  "version": "0.2",
+  "description": "Autoremote driver for Ninja Blocks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,11 @@
   },
   "keywords": [
     "ninjablock",
-    "autoremote"
-  ],
+    "autoremote",
+    "tasker",
+    "Ninja",
+    "Blocks"
+    ],
   "author": "Mark Lavercombe",
   "license": "BSD",
   "bugs": {
