@@ -45,11 +45,12 @@ driver.prototype.config = function(rpc,cb) {
   }
 
   switch (rpc.method) {
-    case 'manual_set_url':     return configHandlers.manual_set_url.call(this,rpc.params,cb); break;
-    case 'manual_get_url':     return configHandlers.manual_get_url.call(this,rpc.params,cb); break;
-    case 'manual_show_remove': return configHandlers.manual_show_remove.call(this,rpc.params,cb); break;
-    case 'manual_remove_url': return configHandlers.manual_remove_url.call(this,rpc.params,cb); break;
-    default:                   return cb(true);                                              break;
+	case 'back':     			return configHandlers.probe.call(this,cb); break;
+    case 'manual_set_url':      return configHandlers.manual_set_url.call(this,rpc.params,cb); break;
+    case 'manual_get_url':      return configHandlers.manual_get_url.call(this,rpc.params,cb); break;
+    case 'manual_show_remove':  return configHandlers.manual_show_remove.call(this,rpc.params,cb); break;
+    case 'manual_remove_url':   return configHandlers.manual_remove_url.call(this,rpc.params,cb); break;
+    default:                    return cb(true);                                              break;
   }
 };
 
