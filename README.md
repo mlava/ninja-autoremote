@@ -3,7 +3,7 @@ ninja-autoremote
 
 v0.2
 
-A driver for Ninja Blocks to allow communication via the Autoremote plugin for Tasker, written by Jo&atilde;o Diaz.
+A driver for Ninja Blocks to allow communication via the Autoremote plugin for Tasker, written by Jo&atilde;o Dias.
 
 This driver contains large parts of code that comes directly from the ninja-ipcam driver written by @thatguydan. Thanks to @paulcull for answering several noob questions that nonetheless were stumping me completely!
 Any mistakes made in the reintegration of the work of the above are mine.
