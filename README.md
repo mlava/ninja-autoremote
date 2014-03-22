@@ -54,7 +54,7 @@ Your Autoremote devices should also be available via the rules engine as actuato
 To-do
 ================
 
-1.	Gist for widgets on new dashboard.
+1.	Gist for widgets on beta dashboard.
 
 
 
