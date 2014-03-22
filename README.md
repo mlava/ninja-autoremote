@@ -55,6 +55,7 @@ To-do
 ================
 
 1.	Gist for widgets on beta dashboard.
+2.	Allow further notification configuration options as per http://autoremotejoaomgcd.appspot.com/AutoRemoteNotification.html.
 
 
 
