@@ -57,6 +57,7 @@ To-do
 1.	Gist for widgets on new dashboard.
 
 
+
 DONE:
 - Implement Send message vs Send Notification option when adding Autoremote devices, and invoke different widgets for each option.
 - Implement naming of Autoremote devices. (In the meantime, just click on the gear and Rename on the old dashboard widget...)
