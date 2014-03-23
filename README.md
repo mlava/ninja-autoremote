@@ -34,11 +34,11 @@ Add or remove Autoremote devices via the menu.
 
 Enter a suitable device name: this will be used to name the widget as well as differentiate your devices in the rules engine.
 
-For arcomm fill in the value you want to appear to the left side of the =:= in your message. For help, see http://joaoapps.com/autoapps-command-system/.
+For arpar fill in the value you want to appear to the left side of the =:= in your message. For help, see http://joaoapps.com/autoapps-command-system/.
 
 Enter the device key for the device you want to send data to. This can be found by following the instructions at http://joaoapps.com/autoremote/direct/.
 
-Message will send a message to your device with arcomm=:=data where data is what you enter in the widget or in the rules engine. Notification will send a notification to your device with the notification title being arcomm and the notification text the data you enter.
+Message will send a message to your device with arpar=:=data where data is what you enter in the widget or in the rules engine. Notification will send a notification to your device with the notification title being arpar and the notification text the data you enter.
 
 
 Use
@@ -61,5 +61,5 @@ To-do
 DONE:
 - Implement Send message vs Send Notification option when adding Autoremote devices, and invoke different widgets for each option.
 - Implement naming of Autoremote devices. (In the meantime, just click on the gear and Rename on the old dashboard widget...)
-- Implement user-defined arcomm text in messages (ie. the left side of the =:= in the Autoapps commands structure). For now this defaults to 'Nina=:='.
+- Implement user-defined arpar text in messages (ie. the left side of the =:= in the Autoapps commands structure). For now this defaults to 'Nina=:='.
 - Gist for widgets on beta dashboard.
