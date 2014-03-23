@@ -1,6 +1,6 @@
 {
   "name": "ninja-autoremote",
-  "version": "0.2",
+  "version": "0.2.0",
   "description": "Autoremote driver for Ninja Blocks",
   "main": "index.js",
   "scripts": {
