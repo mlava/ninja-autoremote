@@ -54,8 +54,7 @@ Your Autoremote devices should also be available via the rules engine as actuato
 To-do
 ================
 
-1.	Gist for widgets on beta dashboard.
-2.	Allow further notification configuration options as per http://autoremotejoaomgcd.appspot.com/AutoRemoteNotification.html.
+1.	Allow further notification configuration options as per http://autoremotejoaomgcd.appspot.com/AutoRemoteNotification.html.
 
 
 
@@ -63,3 +62,4 @@ DONE:
 - Implement Send message vs Send Notification option when adding Autoremote devices, and invoke different widgets for each option.
 - Implement naming of Autoremote devices. (In the meantime, just click on the gear and Rename on the old dashboard widget...)
 - Implement user-defined arcomm text in messages (ie. the left side of the =:= in the Autoapps commands structure). For now this defaults to 'Nina=:='.
+- Gist for widgets on beta dashboard.
