@@ -1,7 +1,7 @@
 ninja-autoremote
 ================
 
-v0.2
+v0.3
 
 A driver for Ninja Blocks to allow communication via the Autoremote plugin for Tasker, written by Jo&atilde;o Dias.
 
@@ -51,12 +51,16 @@ Check your Autoremote log to confirm you are receiving messages from the Ninja B
 Your Autoremote devices should also be available via the rules engine as actuators - complete the text to receive that message on your Autoremote device when the rule fires.
 
 
+Changelog
+================
+v0.3
+Implement automatic registration of new devices from configuration menu as devices on dashboard. (Avoid having to restart Ninja Block service to register the Autoremote widget on dash.)
+
+
 To-do
 ================
 
 1.	Allow further notification configuration options as per http://autoremotejoaomgcd.appspot.com/AutoRemoteNotification.html.
-
-
 
 DONE:
 - Implement Send message vs Send Notification option when adding Autoremote devices, and invoke different widgets for each option.
