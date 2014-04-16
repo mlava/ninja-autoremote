@@ -1,7 +1,7 @@
 ninja-autoremote
 ================
 
-v0.4
+v0.4.1
 
 A driver for Ninja Blocks to allow communication via the Autoremote plugin for Tasker, written by Jo&atilde;o Dias.
 
@@ -40,11 +40,6 @@ Enter the device key for the device you want to send data to. This can be found 
 
 Message will send a message to your device with arpar=:=data where data is what you enter in the widget or in the rules engine. Notification will send a notification to your device with the notification title being arpar and the notification text the data you enter.
 
-v0.4 introduces ability to send a TTS announcement from Ninja Block to your android device. Create a new device in the driver config as before, but use an arpar that triggers a specific profile in tasker. Select TTS Announcement in the dropdown menu.
-In tasker, set up a profile that reacts when an autoremote message with the arpar is received. This should trigger a task with two steps: 
-1. HTTP Get with %arcomm in the Server:Port section, set Mime Type to audio/* and set an output file name with suffix.mp3.
-2. Music Play with File being the mp3 you named in step 1.
-This should allow you to send a TTS announcement using the Google Translate TTS engine to your device, and have it automatically spoken to you.
 
 Use
 ================
@@ -58,6 +53,10 @@ Your Autoremote devices should also be available via the rules engine as actuato
 
 Changelog
 ================
+
+v0.4.1
+Deprecate TTS announcement feature as already part of Autoremote and Tasker capcabilities... no need to duplicate. Sorry for confusion!
+ 
 v0.4
 Implement TTS announcements using the Google Translate TTS engine and a specific tasker profile and task combination (see configuration above).
 
@@ -71,6 +70,7 @@ To-do
 1.	Allow further notification configuration options as per http://autoremotejoaomgcd.appspot.com/AutoRemoteNotification.html.
 
 DONE:
+- Deprecate TTS via Google Translate TTS engine - not needed as already part of Tasker functionality.
 - Implement TTS via Google Translate TTS engine.
 - Implement Send message vs Send Notification option when adding Autoremote devices, and invoke different widgets for each option.
 - Implement naming of Autoremote devices. (In the meantime, just click on the gear and Rename on the old dashboard widget...)
