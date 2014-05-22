@@ -1,7 +1,7 @@
 ninja-autoremote
 ================
 
-v0.4.1
+v0.4.2
 
 A driver for Ninja Blocks to allow communication via the Autoremote plugin for Tasker, written by Jo&atilde;o Dias.
 
@@ -53,6 +53,9 @@ Your Autoremote devices should also be available via the rules engine as actuato
 
 Changelog
 ================
+
+v0.4.2
+Corrected message format to use =:= convention.
 
 v0.4.1
 Deprecate TTS announcement feature as already part of Autoremote and Tasker capcabilities... no need to duplicate. Sorry for confusion!
